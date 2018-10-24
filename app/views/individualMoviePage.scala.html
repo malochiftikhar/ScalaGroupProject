@@ -1,14 +1,19 @@
+@(viewings: Film)
 
 @main("individualMoviePage") {
+    <div class = "image-goes-here">
 
-  <div class = "availability-container">
+    </div>
 
-    <ul>
-      <li> 12:00 </li>
-      <li> 13:00 </li>
-      <li> 18:00 </li>
-      <li> 24:00 </li>
-    </ul>
-    <p> SYNOPSIS GOES HERE </p>
-  </div>
+    <div class = "availability-container">
+        for(v <- viewings){
+     <div>
+        @v.viewings
+     </div>
+            }
+    </div>
+
+    <div>
+        <p> SYNOPSIS GOES HERE </p>
+    </div>
 }
