@@ -1,5 +1,4 @@
 @(message: String)
-
 @main("Welcome to Play") {
 
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/screenBooking.css")">
@@ -7,15 +6,14 @@
         <h1>Please select your seats</h1>
         <div class="screen">
         </div>
-
-        <ol class="seatList">
+            <ol class="seatList">
             <li class="row row--1">
-                <ol class="seats" type="B">
-                    <li class="seat">
+             <ol class="seats" type="B">
+             <li class="seat">
                         <input type="checkbox" id="1A" />
                         <label onclick="myFunction(this)" for="1A">1A</label>
                     </li>
-                    <li class="seat">
+                <li class="seat">
                         <input type="checkbox" id="1B" />
                         <label onclick="myFunction(this)" for="1B">1B</label>
                     </li>
@@ -39,7 +37,7 @@
                         <input type="checkbox" id="1G" />
                         <label for="1G">1G</label>
                     </li>
-                </ol>
+                 </ol>
             </li>
             <li class="row row--2">
                 <ol class="seats" type="A">
@@ -332,8 +330,11 @@
         </ol>
     </div>
     <script>
+            var chosen = []
             function myFunction(input) {
+                chosen.push(input.previousElementSibling.id)
                 console.log(input.previousElementSibling.id + !input.previousElementSibling.checked);
+                console.log(chosen)
             }
     </script>
 }
