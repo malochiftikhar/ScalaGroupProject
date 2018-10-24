@@ -1,0 +1,12 @@
+@(paid: Seq[Payment],form:Form[Payment])(implicit messages:Messages)
+
+@main("Payment") {
+    <h1>Confirm Payment</h1>
+
+    @helper.form(routes.Application.pay()) {
+        @helper.inputText(form("email"), '_label -> "Email address", '_showConstraints -> false)
+        @helper.inputCheckboxGroup()
+        @helper.inputText(form("cardNo"), '_label -> "Card Number", '_showConstraints -> false)
+        <button type="submit">Confirm Payment</button>
+    }
+}
