@@ -1,0 +1,17 @@
+@(movies: Seq[Movie])
+
+@main("Movies"){
+    <head>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/movies.css")">
+
+
+    </head>
+    <h1 id="title">Movies</h1>
+
+    <ul class="flex-container">
+        @for(movie <- movies) {
+            <li class="flex-item">@movie.title</li>
+        }
+    </ul>
+}
+

@@ -1,0 +1,16 @@
+@(response: String)
+
+@main("Movies"){
+    <head>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/movies.css")">
+
+    </head>
+    <h1 id="title">Movies</h1>
+
+    <ul class="flex-container">
+        @for(movie <- movies) {
+            <li class="flex-item"><img src=https://image.tmdb.org/t/p/w500/@movie.split("},")(i).split("poster_path\":\"")(1).split("\",\"")(0).substring(1) class="img-responsive" style="width:100%" alt="Image"></li>
+        }
+    </ul>
+}
+
