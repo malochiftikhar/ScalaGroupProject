@@ -9,4 +9,9 @@ class Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
   }
 
+
+  def screenBooking = Action {
+   Ok(views.html.screenBooking("starting screen booking"))
+  }
+
 }
