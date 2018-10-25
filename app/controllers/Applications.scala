@@ -14,7 +14,7 @@ class Applications @Inject() (val messagesApi: MessagesApi, environment: play.ap
     Ok(views.html.listCustomers(Customer.customers, Customer.createCustomerForm))
   }
 
-  def createCD = Action { implicit request =>
+  def createCustomer = Action { implicit request =>
 
     val formValidationResult = Customer.createCustomerForm.bindFromRequest
 
@@ -24,7 +24,7 @@ class Applications @Inject() (val messagesApi: MessagesApi, environment: play.ap
     }, { customer =>
 
       Customer.customers.append(customer)
-      Redirect(routes.Application.listCustomers)
+      Redirect(routes.Applications.listCustomers)
     })
   }
 
