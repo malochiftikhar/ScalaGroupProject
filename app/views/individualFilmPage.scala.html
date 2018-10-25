@@ -1,0 +1,51 @@
+@import scala.collection.mutable.ArrayBuffer
+@(viewings: ArrayBuffer[Viewing])
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+        }
+        .grid-container > .times {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid black;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        h1 {
+            text-align: right;
+            padding-right: 8.5pc;
+        }
+    .synopsis-container {
+border: 1px solid black;
+        text-align: left;
+        width: 20pc;
+        position: fixed;
+        right: 2pc;
+
+    }
+
+    .synopsis-title {
+        text-align: center ;
+    }
+
+    .synopsis-content {
+        padding-left: 1pc;
+    }
+
+</style>
+
+@main("individualFilmPage") {
+
+    <div class = "image-goes-here"> </div>
+
+
+            SYNOPSIS:
+        </div> <br>
+           <div class = "synopsis-content">  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+</div>
+}

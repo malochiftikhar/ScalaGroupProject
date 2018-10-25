@@ -5,7 +5,7 @@
 # Home page
 GET     /                           controllers.Application.index
 
-GET /moviePageTest                  controllers.Application.individualMoviePage
+GET /moviePageTest                 controllers.Application.individualFilmPage
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
