@@ -1,0 +1,26 @@
+@(customers: Seq[Customer], form: Form[Customer])(implicit messages: Messages)
+
+@main("Customers") {
+
+ <h1>Customer Reviews</h1>
+ <table>
+     <thead>
+         <tr><th>Name</th><th>Comment</th></tr>
+     </thead>
+     <tbody>
+         @for(customer <- customers){
+             <tr><td>@customer.name</td><td>@customer.comment</td></tr>
+         }
+     </tbody>
+ </table>
+
+ <hr/>
+
+ @helper.form(routes.Application.createCustomer()) {
+
+     @helper.inputText(form("name"), '_label -> "Name", '_showConstraints -> false)
+     @helper.inputText(form("comment"), '_label -> "Comments", '_showConstraints -> false)
+     <button type="submit">Post</button>
+ }
+
+}
