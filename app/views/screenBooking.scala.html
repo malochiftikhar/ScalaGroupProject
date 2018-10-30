@@ -330,8 +330,17 @@
         </ol>
     </div>
     <script>
+        var selectedSeats = [];
             function myFunction(input) {
-                console.log(input.previousElementSibling.id + !input.previousElementSibling.checked);
+                var seatNumber = input.previousElementSibling.id;
+                var selectedSeat = input.previousElementSibling.checked;
+                if (selectedSeat){
+                    selectedSeats.splice(selectedSeats.indexOf(seatNumber),1)
+                }
+                else {
+                    selectedSeats.push(seatNumber);
+                }
+                console.log(selectedSeats)
             }
     </script>
 }
